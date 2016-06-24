@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>&rAarr; Pokes | Site</title>
+    <meta name="description" content="User Dashboard is a full CRUD application written in Python Flask and Pylot.">
+    <meta name="author" content="ishi Hussain">
+    <!-- IE Edge Meta tag (X means to render in the latest engine) -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Viewport , set to the natural device width and set the initial scale to 1.0 to stop shrinking of the website on Mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap/css/bootstrap.css") }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/css/form-elements.css') }}">
+
+   <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/fonts/font-awesome.min.css') }}">
+
+    <!-- custom css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="{{ url_for('static',filename='js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{url_for('static', filename='images/favicon.ico')}}" type="image/x-icon">
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse gradient"
+         data-spy="affix"
+         role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><span>Welcome | Pokes App</span></a>
+            </div><!-- navbar-header -->
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=""><a href="/logout" data-offset="0">Logout</a></li>
+                </ul>
+            </div><!-- collapse navbar-collapse -->
+        </div><!-- container -->
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="content container">
+        <div class="row">
+            <div class="col-sm-12">
+                <section>
+                    <div class="jumbotron">
+                      <h1 class="display-3">Welcome, {{session['name']}}</h1>
+                      <p class="lead">:   people poked you</p>
+                      <p class="lead">mic</p>
+                      <p class="lead"></p>
+                      <p class="lead"></p>
+                      <hr class="m-y-2">
+                    </div>
+
+                </section>
+            </div>
+        </div>
+        <table class="table table-bordered">
+              <caption><h1>People you may want to poke</h1></caption>
+              <thead>
+                <tr>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Alias</th>
+                  <th class="text-center">Email Address</th>
+                  <th class="text-center">Poke History</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% if all_users %}
+              {% for user in all_users %}
+                <tr>
+                  <td>{{user['name']}}</td>
+                  <td>{{user['alias']}}</td>
+                  <td>{{user['email']}}</td>
+                  <td>20 pokes</td>
+                  <td class="text-center">
+                      <form action="/poke/{{user['id']}}" method="get" style="display: inline;">
+                          <button type="submit" class="btn">Poke!</button>
+                      </form>
+                  </td>
+                </tr>
+              {% endfor %}
+              {% endif %}
+              </tbody>
+            </table>
+    </div>
+
+</body>
+</html>

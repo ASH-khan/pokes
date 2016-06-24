@@ -1,0 +1,195 @@
+/* CSS used here will be applied after bootstrap.css */
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- General Content
+- Typography
+- Header & navigation
+- Images
+- Footer
+- Media Queries
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* General Contents
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.content {
+    box-shadow: 3px 3px 5px 6px rgba(35, 34, 34, 0.77);
+    background: rgba(0, 0, 0, 0.7777);
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    font-family: 'abel',sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    background: #000000;
+    color: #fff;
+    background-image: url("images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1.primary_name {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* - Header & navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.gradient {
+    background-image:
+            radial-gradient(
+                    circle at top right,
+                    rgba(43, 30, 22, 0.99),
+                    #672E02
+            );
+}
+
+.navbar-inverse {
+    width: 100%;
+    z-index: 100;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background: rgba(11, 75, 130, 0.63);
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.centered-form{
+	margin-top: 80px;
+}
+
+.panel {
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.input-group-addon {
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+
+}
+.form-control:focus {
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+.form-signup input[type="text"],
+.form-registration input[type="text"] {
+		color: #000;
+		border: 1px solid rgb(50, 118, 177);
+}
+.form-signup input[type="password"],
+.form-registration input[type="email"],
+.form-registration input[type="password"]{
+		border: 1px solid rgb(50, 118, 177);
+}
+
+form.cmt input[type="text"] {
+	color: #000;
+}
+
+
+h1 {
+	font-size: 29px;
+	font-weight: 700;
+	margin-bottom: 40px;
+	color: #f5f5f5;
+}
+.highlight {
+	color: #990e22;
+}
+
+.selectpicker {
+	width: 103px;
+}
+#loc {
+	margin-left: 40px;
+}
+#lang {
+	margin-left: 14px;
+}
+input[type="text"], textarea, textarea.form-control {
+	color: #000!important;
+	background-color: #3B666B;
+}
+.info {
+
+    width: 600px;
+	background-color: #1b6d85;
+	border: 4px solid #3B666B;
+    color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+    padding: 15px;
+}
+
+.green  {
+    width: 600px;
+    background-color: #2b542c;
+    border: 4px solid #3B666B;
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+    padding: 10px;
+
+}
+a {
+    text-decoration: none;
+}
+
+caption { color: #000;}
+
+button.btn_destroy {
+
+	margin-top: 20px;
+	margin-left: 50px;
+}
+a.btn_no {
+	position: absolute;
+    top: 145px;
+    left: 27px;
+}
+thead{background-color: #3e575d; color: #f5f5f5;}
+
+.error {
+	color: #761c19;
+    padding: 10px;
+}
+
+
+/*************/
+.jumbotron {
+	margin-top: 70px;
+	color: #000;
+}
+
+.user_dashboard {
+}
+
+.user_dashboard:first-child {
+}
+
+label {
+    color: #000;
+}
+
+.add_btn {
+    float: right;
+    position: relative;
+    top: 70px;
+}
+
+h1.edit_user {
+    margin-top: 80px;
+}
+
+h1 {
+    margin-top: 80px;
+}
